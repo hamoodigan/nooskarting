@@ -116,15 +116,15 @@ tr:last-child td{border-bottom:0}
 
 /* ---- VENUES ---- */
 .venues{display:grid;grid-template-columns:1fr 1fr;gap:2px;background:var(--ln);border:1px solid var(--ln)}
-.venue{background:var(--bk2);padding:30px 28px;display:grid;gap:18px;align-content:start}
+.venue{background:var(--bk2);padding:30px 28px;display:grid;gap:18px;grid-template-rows:auto auto auto 1fr auto;align-content:start}
 .venue h3{font-size:40px}
 .venue h3 small{display:block;font-size:14px;letter-spacing:.28em;color:var(--rd);margin-bottom:6px}
 .venue address{font-style:normal;color:var(--gy);line-height:1.55}
 .venue .hrs{font-family:var(--disp);font-weight:700;font-size:20px;letter-spacing:.06em;text-transform:uppercase;display:flex;gap:10px;align-items:center}
 .venue .hrs i{width:10px;height:10px;background:var(--rd);box-shadow:0 0 10px var(--rd)}
 .venue .row{display:flex;gap:10px;flex-wrap:wrap}
-.circuit{background:var(--bk);border:1px solid var(--ln);padding:10px;position:relative}
-.circuit svg{width:100%;height:auto;display:block}
+.circuit{background:var(--bk);border:1px solid var(--ln);padding:10px;position:relative;aspect-ratio:4/3;width:100%}
+.circuit svg{width:100%;height:100%;display:block}
 .circuit .cap{position:absolute;left:14px;top:12px;font-family:var(--disp);font-size:12px;letter-spacing:.24em;color:var(--gy);text-transform:uppercase}
 @media(max-width:860px){.venues{grid-template-columns:1fr}}
 
@@ -366,14 +366,14 @@ footer a:hover{color:var(--wt)}
         <h3><small>Cairo</small>Dandy Mega Mall</h3>
         <address>Behind Dandy Mega Mall (not inside the mall)<br>Km 28, Cairo – Alexandria Desert Road<br>6th of October, Giza</address>
         <div class="hrs"><i></i>Daily 5:00 PM – 1:00 AM</div>
-        <div class="circuit"><span class="cap">Circuit layout</span><svg id="cairoMap" viewBox="0 0 1000 700" aria-label="Cairo circuit layout, traced from the satellite view"></svg></div>
+        <div class="circuit"><span class="cap">Circuit layout</span><svg id="cairoMap" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1000 700" aria-label="Cairo circuit layout, traced from the satellite view"></svg></div>
         <div class="row"><a class="btn red sm" href="#book" data-venue="cairo">Book Cairo</a><a class="btn line sm" href="https://www.google.com/maps/search/?api=1&query=30.0663615,31.0281235" target="_blank" rel="noopener">Directions</a></div>
       </article>
       <article class="venue">
         <h3><small>Sharm El Sheikh</small>Fanar Road</h3>
         <address>Fanar Road, opposite the Ritz-Carlton<br>Hadabah Om El Seed<br>Sharm El Sheikh, South Sinai</address>
         <div class="hrs"><i></i>Daily 5:00 PM – 1:00 AM</div>
-        <div class="circuit"><span class="cap">Circuit layout</span><svg id="sharmMap" aria-label="Sharm El Sheikh circuit layout"></svg></div>
+        <div class="circuit"><span class="cap">Circuit layout</span><svg id="sharmMap" preserveAspectRatio="xMidYMid meet" aria-label="Sharm El Sheikh circuit layout"></svg></div>
         <div class="row"><a class="btn red sm" href="#book" data-venue="sharm">Book Sharm</a><a class="btn line sm" href="https://www.google.com/maps/search/?api=1&query=Noos+Karting+Fanar+Road+Sharm+El+Sheikh" target="_blank" rel="noopener">Directions</a></div>
       </article>
     </div>
